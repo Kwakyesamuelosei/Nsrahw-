@@ -1,4 +1,4 @@
-# Nsrahw-
+# Nsrahwe
 
 A Tourism Web Application
 
@@ -8,3 +8,6 @@ Team:
 
 * Sammy (Integration lead)
 
+* Angie 
+
+URL: http://nsrahwe.herokuapp.com/
