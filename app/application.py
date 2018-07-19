@@ -9,8 +9,9 @@ from flask import request
 from flask import redirect
 from flask import url_for
 import json
+import os
 from app.model import Region
-
+# from app.model import db
 
 region = Region()
 
@@ -20,7 +21,10 @@ app = Flask(__name__)
 
 # Configurations
 app.config['PROPAGATE_EXCEPTIONS'] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config.from_object(__name__)
+
+# db.init_app(app)
 
 # Sample HTTP error handling
 @app.errorhandler(404)
@@ -33,29 +37,33 @@ def server_error(error):
   return render_template('500.html'), 500
 
 
-@app.route('/' , methods=['GET', 'POST'])
+@app.route('/' , methods=['GET'])
 def root_route():
     return render_template("pages/base_page.html")
 
-@app.route('/selected_region' , methods=['GET','POST'])
+@app.route('/selected_region' , methods=['POST'])
 def selected_region():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
+		print("Printing request data")
+		print(request_data)
 		data= region.getTouriteSiteByRegion(request_data)
-		return json.dumps(data)
+		print("Printing  data")
+		print(data)
+		return data
 	else:
 		data = {
     			'code':'02',
     			'msg':'Request Method Invalid'
     	}
-		return jsonify(**data)
+		return json.dumps(data)
 
-@app.route('/site_id' , methods=['GET','POST'])
+@app.route('/site_id' , methods=['POST'])
 def site_id():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteById(request_data)
-		return json.dumps(data)
+		return data
 	else:
 		data = {
     			'code':'02',

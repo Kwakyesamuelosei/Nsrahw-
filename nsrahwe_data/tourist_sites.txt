@@ -1,5 +1,0 @@
-DB Name: Nsrahwe
-Table name : tourist_site
-primary key: id
-schema for the tourist_site:
-{id, tourist_site_name, tourist_site_image, tourist_alt_name, region_shortname, tourist_site_description}

@@ -10,6 +10,21 @@
 
 
 @font-face {
+  font-family: "FontAwesome";
+  src: local(FontAwesome), url("../fonts/FontAwesome-webfont.eot");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local(FontAwesome), url("../fonts/FontAwesome-webfont.eot");
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: local(FontAwesome), url("../fonts/FontAwesome-webfont.eot");
+}
+
+@font-face {
   font-family: "Montserrat";
   src: local(Montserrat), url("../fonts/Montserrat/Montserrat-Regular.ttf");
 }

@@ -105,6 +105,8 @@
             $('#loading').show('fast');
 
             $.postJSON("/selected_region", formData, function(data){
+                console.log("Printing response from db");
+                console.log(data);
             
             if (data.code == "00") {
 
@@ -120,7 +122,7 @@
                 for (var i = 0; i < data.data.length; i++) {
               
                 tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\')" class="col-md-3">'+
-                                    '<div class="card" style="width: 15rem;height:15rem;cursor:pointer;">'+
+                                    '<div class="card" style="width: 15rem;height:20rem;cursor:pointer;">'+
                                       '<img style="max-width: 238px;height: 238px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[i]['tourist_site_image']+'" alt="'+data.data[i]['tourist_alt_name']+'">'+
                                       '<div class="card-body">'+
                                         '<h5 class="card-title">'+data.data[i]['tourist_site_name']+'</h5>'+
