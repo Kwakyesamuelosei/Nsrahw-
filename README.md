@@ -2,7 +2,7 @@
 
 A Tourism Web Application
 
-Team:
+## Team
 
 * Bill 
 
@@ -10,4 +10,6 @@ Team:
 
 * Angie 
 
-URL: http://nsrahwe.herokuapp.com/
+## URL
+
+https://nsrahwe.herokuapp.com/
