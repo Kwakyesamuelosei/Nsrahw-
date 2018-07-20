@@ -58,4 +58,4 @@ Does not provide directions to selected site.
 
 ### DEMONSTRATION
 
-- A brief demo of our Nsrahwe( web App. Click [here](https://nsrahwe.herokuapp.com/) to view the app.
+- A brief demo of our Nsrahwe( web App). Click [here](https://nsrahwe.herokuapp.com/) to view the app.
