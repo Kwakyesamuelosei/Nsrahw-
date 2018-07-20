@@ -121,7 +121,7 @@
 
                 for (var i = 0; i < data.data.length; i++) {
               
-                tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\')" class="col-md-3">'+
+                tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\',\''+ data.data[i]['tourist_site_area_name'] +'\')" class="col-md-3">'+
                                     '<div class="card" style="width: 15rem;height:20rem;cursor:pointer;">'+
                                       '<img style="max-width: 238px;height: 238px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[i]['tourist_site_image']+'" alt="'+data.data[i]['tourist_alt_name']+'">'+
                                       '<div class="card-body">'+
@@ -149,40 +149,37 @@
 
 
 
-function get_site_id(id){
+function get_site_id(id,tourist_site_area_name){
     
-    console.log("Printing id");
-    console.log(id);
-
+ 
     var formData = {
         'id': id,
+        'tourist_site_area_name':tourist_site_area_name
     };
+    console.log("Printing formData");
+    console.log(formData);
+
 
     $.postJSON("/site_id", formData, function(data){
 
-        console.log("Printing site id response");
+        console.log("Printing site id and area name response ");
         console.log(data);
             
         if (data.code == "00") {
 
-            var tblBodyHtml = ""
-
-            for (var i = 0; i < data.data.length; i++) {
-          
-            tblBodyHtml += '<img style="max-height: 286px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[i]['tourist_site_image']+'" alt="'+data.data[i]['tourist_alt_name']+'">'+
+            var tblBodyHtml = ""          
+            tblBodyHtml += '<img style="max-height: 286px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[0]['tourist_site_image']+'" alt="'+data.data[0]['tourist_alt_name']+'">'+
                           '<div class="">'+
-                            '<p style="padding-top: 1em;color: #800000;">'+data.data[i]['tourist_site_description']+'</p>'+
-                            '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> 90&deg;C</span></p>'+
-                            '<p style="color: #800000;font-weight: bold;">Current Wind : <span> 90mph </span></p>'+
+                            '<p style="padding-top: 1em;color: #800000;">'+data.data[0]['tourist_site_description']+'</p>'+
+                            '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> '+data.weather_data['temp']+'&deg;C</span></p>'+
+                            '<p style="color: #800000;font-weight: bold;">Current Humidity : <span> '+data.weather_data['humidity']+' <i class="fa fa-tint"></i> </span></p>'+
                           '</div>';
 
            
             $('#touristDetails').html("");
             $('#touristDetails').html(tblBodyHtml);
             $('#siteDetailsModal').modal("show");
-            
 
-        }
         }else{
 
         }
@@ -190,6 +187,12 @@ function get_site_id(id){
         });
 
 }
+
+
+function get_tourist_location(){
+    window.location = "/sit_location";
+}
+
 
     
 function validate_text_feild(value, element){

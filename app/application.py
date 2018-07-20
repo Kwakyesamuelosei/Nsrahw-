@@ -15,7 +15,6 @@ from app.model import Region
 
 region = Region()
 
-
 # Creating flask application instance
 app = Flask(__name__)
 
@@ -45,11 +44,8 @@ def root_route():
 def selected_region():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
-		print("Printing request data")
-		print(request_data)
 		data= region.getTouriteSiteByRegion(request_data)
-		print("Printing  data")
-		print(data)
+
 		return data
 	else:
 		data = {
@@ -71,6 +67,9 @@ def site_id():
     	}
 		return json.dumps(data)
 
+@app.route('/sit_location' , methods=['GET','POST'])
+def sit_location():
+	return render_template("pages/location_api.html")
 
 
 
