@@ -1,5 +1,5 @@
 ## NSRAHWE 
-#### A Tourism App
+#### A Web App for Tourists
 
 ---
 
@@ -7,7 +7,8 @@
 
 +++
 
-Most tourist and or indigenes have little or no knowledge about the history of tourist sites in Ghana as well as where it is located and the weather condition at the time of visiting.
+Little or no knowledge on tourist sites in Ghana.
+
 
 ---
 
@@ -15,25 +16,29 @@ Most tourist and or indigenes have little or no knowledge about the history of t
 
 +++
 
-To build a web application that will serve as a platform for easy access to information about the history of the tourist sites, where it is located and the weather condition of the town in which they are located in Ghana.
-
----
-
-### SCOPE
-
-+++
-
-This application is built specifically for tourists and or the natives of Ghana or anyone who wants to get information about the history of the various tourist sites in Ghana.
-
+To build a web application that will serve as a platform for easy access to information on tourist sites in  Ghana.
+ 
 ---
 
 ### OBJECTIVES
 
 +++
 
-- To help tourists have knowledge about the tourist site one wants to visit
-- Give information about the location of the site
-- Help tourist prepare adequately with regards to the weather condition at that particular moment.
+- To aid easy access to getting information on tourist sites in Ghana.
+- Provide location details and weather conditions of tourist sites.
+
+---
+### SCOPE
+
++++
+
+This application is built specifically for tourists and anyone who wants to access information on the various tourist sites in Ghana.
+
+---
+### LIMITATION
+
++++
+Does not provide directions to selected site.
 
 ---
 
@@ -44,6 +49,7 @@ This application is built specifically for tourists and or the natives of Ghana 
 - HTML
 - CSS
 - BOOTSTRAP
+- PYTHON
 - FLASK(Web Server)
 - HEROKU(Hosting Server)
 - WEB APIS(OPENSTREET MAP, OPENWEATHER)
@@ -52,4 +58,4 @@ This application is built specifically for tourists and or the natives of Ghana 
 
 ### DEMONSTRATION
 
-- A brief demo of our Nsrahwe(tourism) App. Click [here](https://nsrahwe.herokuapp.com/) to view the app.
+- A brief demo of our Nsrahwe( web App. Click [here](https://nsrahwe.herokuapp.com/) to view the app.
