@@ -13,6 +13,7 @@ import os
 from app.model import Region
 # from app.model import db
 
+#Creating an instance of Region class
 region = Region()
 
 # Creating flask application instance
