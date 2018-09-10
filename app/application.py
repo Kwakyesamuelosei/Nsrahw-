@@ -22,8 +22,6 @@ app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config.from_object(__name__)
 
-# db.init_app(app)
-
 # Sample HTTP error handling
 @app.errorhandler(404)
 def not_found(error):
