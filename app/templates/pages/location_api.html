@@ -1,11 +1,15 @@
 <html><body>
   <div id="mapdiv"></div>
-  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script src="https://www.openlayers.org/api/OpenLayers.js"></script>
   <script>
     map = new OpenLayers.Map("mapdiv");
     map.addLayer(new OpenLayers.Layer.OSM());
 
+<<<<<<< HEAD
     var lonLat = new OpenLayers.LonLat( -1.348 , 5.083 )
+=======
+    var lonLat = new OpenLayers.LonLat( -0.17449,5.84802 )
+>>>>>>> d616b0cbca19e5f68f52865a18a8031d967062db
           .transform(
             new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
             map.getProjectionObject() // to Spherical Mercator Projection

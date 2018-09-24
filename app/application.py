@@ -13,6 +13,7 @@ import os
 from app.model import Region
 # from app.model import db
 
+#Creating an instance of Region class
 region = Region()
 
 # Creating flask application instance
@@ -20,10 +21,7 @@ app = Flask(__name__)
 
 # Configurations
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config.from_object(__name__)
-
-# db.init_app(app)
 
 # Sample HTTP error handling
 @app.errorhandler(404)

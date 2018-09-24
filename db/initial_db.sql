@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+--drop table
+DROP TABLE tourist_site;
+
+=======
 --drop table 
 DROP TABLE tourist_site;
+>>>>>>> 923070531a850d076477cf0448babaa082a82da6
 -- creating tables
 CREATE TABLE tourist_site(
    id SERIAL PRIMARY KEY     NOT NULL,
